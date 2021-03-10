@@ -1,0 +1,87 @@
+/*  Для контейнера
+    display +
+    grid-template-columns +
+    grid-template-rows +
+    grid-template-areas +
+    grid-template - объединяет grid-template-columns, grid-template-rows и grid-template-areas
+    grid-column-gap +
+    grid-row-gap + 
+    grid-gap - объединяет grid-column-gap и grid-row-gap
+    justify-items +
+    align-items +
+    place-items +
+    justify-content +
+    align-content +
+    place-content +
+    grid-auto-columns +
+    grid-auto-rows +
+    grid-auto-flow
+    grid
+*/
+/*  Для элемента
+    grid-column-start +
+    grid-column-end + 
+    grid-row-start +
+    grid-row-end +
+    grid-column - объединяет grid-column-start и grid-column-end
+    grid-row - объединяет grid-row-start и grid-row-end
+    grid-area +
+    justify-self
+    align-self
+    place-self
+*/
+img {
+    width: 150px;
+    height: 150px;
+}
+
+body {
+    background-color: #a7c5eb; 
+    color:white;
+}
+
+.grid-container {
+    display: grid;
+    margin-top: 5px;
+    padding: 10px;
+    grid-template-columns: 20% 75%;
+    grid-template-rows: auto 700px auto;
+    grid-template-areas:
+      'header header '
+      'image main'
+      'image main '
+      'footer footer ';
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+}
+
+.item-1 {
+    grid-area: header;
+    background: #440a67;
+    text-align: center;
+    grid-auto-columns: 100%;
+    grid-auto-rows: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.item-2 {
+    grid-area: main;
+    background: #93329e;
+    text-align: center;
+}
+
+.item-3 {
+    grid-area: footer;
+    background: #b4aee8;
+    text-align: right;
+}
+
+.item-4 {
+    color:black;
+    grid-area: image;
+    background: #ffe3fe;
+    text-align: center;
+}
